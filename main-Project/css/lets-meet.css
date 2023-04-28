@@ -1,0 +1,423 @@
+.error{
+    border: 0.1rem solid red !important;
+}
+
+.success {
+    color: white;
+    font-family: 'Metropolis-Light';
+    background-color: #73ff9085;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+
+/* let's meet for a coffee */
+.lets-meet-wrapper{
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.lets-meet-wrapper .lets-meet{
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form{
+    flex: 1 0 45%;
+    min-width: 60vh
+}
+
+.lets-meet-wrapper .lets-meet .contact-form .padding{
+    padding: 0vh 4vw;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form .image-wrapper{
+    flex: 1;
+    display: flex;
+    margin-left: 0.1em;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form .image-wrapper > div:nth-child(1){
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form .image-wrapper > div:nth-child(2){
+    flex: 1;
+}
+
+
+.lets-meet-wrapper .lets-meet .contact-form .image-wrapper .title{
+    position: relative;
+    z-index: 2;
+    margin-top: 4vh;
+    display: inline-block;
+}
+ 
+.lets-meet-wrapper .lets-meet .contact-form .image-wrapper .title h3{
+    color: #fff;
+    position: relative;
+    font-family: 'Metropolis-Bold';
+    font-weight: revert;
+    font-size: 0.6em;
+    text-align: left;
+    display: inline;
+    font-size: 3rem;
+}
+
+
+.lets-meet-wrapper .lets-meet .contact-form .image-wrapper  p{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    position: relative;
+    font-family: 'Metropolis-Light';
+    font-size: 0.85vw;
+    font-size: min(max(1rem,calc(1rem + 0.01vw)),1.75rem);
+    line-height: 1.8;
+    z-index: 2;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2vw 0;
+}
+.lets-meet-wrapper .lets-meet .contact-form #contact .input-wrapper {
+    flex: 1 0 40%;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border: 0.1vw solid white;
+    border-radius: 100vw;
+    margin: 0.5em 0.3em;
+    padding-left: 1rem;
+    font-size: initial;
+}
+.lets-meet-wrapper .lets-meet .contact-form #contact .input {
+    height: 2.5rem;
+    background-color: #0000;
+    color: white;
+    font-size: min(max(0.95rem,calc(0.95rem + 0.01vw)),1.75rem);
+    font-family: 'Metropolis-Light';
+    border: 0px solid transparent;
+    margin: 0px !important;
+    width: 97%;
+    padding: 0;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact option {
+    background: #000;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact .input:focus{
+    outline: none;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact .textarea:focus{
+    outline: none;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact .input-wrapper.flex {
+   display: flex;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact select.input.inline {
+    flex: 1;
+    min-width: 4rem;
+}
+
+
+.lets-meet-wrapper .lets-meet .contact-form #contact .input.inline {
+    flex: 30;
+}
+
+
+.lets-meet-wrapper .lets-meet .contact-form #contact textarea {
+    flex: 1 1 70%;
+    background-color: #0000;
+    color: white;
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem 1rem;
+    margin: min(max(0.7rem,calc(0.7rem + 0.01vw)),1.75rem) min(max(0.4rem,calc(0.4rem + 0.01vw)),1.75rem);
+    border: 0.1vw solid white;
+    font-size: min(max(0.95rem,calc(0.95rem + 0.01vw)),1.75rem);
+    font-family: 'Metropolis-Light';
+    min-width: 20vh;
+    border-radius: 1rem;
+    resize: none;
+    overflow: auto;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact div {
+    flex: 2 0 100%;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+/* .lets-meet-wrapper .lets-meet .contact-form #contact div input[type=submit]{
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 50vw;
+    border: 0vw;
+    background: linear-gradient(55.38deg, #2B47F0 17.6%, #DD4FE9 75.36%);
+    font-family: 'Metropolis-Bold';
+    font-size: min(max(1.3rem,calc(1.3rem + 0.01vw)),1.75rem);
+    position: relative;
+    z-index: 2;
+} */
+
+
+.lets-meet-wrapper .lets-meet .contact-form #contact div .submit{
+    position: relative;
+    display: inline;
+    font-size: 1rem;
+    z-index: 3;
+    color: #fff;
+    padding: 1em 4em 1em 1em;
+    font-family: 'Metropolis-Light';
+    letter-spacing: 0.2em;
+    margin-left: 1.5em;
+}
+.lets-meet-wrapper .lets-meet .contact-form #contact div .submit .text{
+    position: relative;
+    z-index: 5;
+}
+.lets-meet-wrapper .lets-meet .contact-form #contact div .submit .circul{
+    background: linear-gradient(29deg,#2B47F0 24% ,#DD4FE9 75% );
+    padding: 1.5em 1.5em;    
+    border-radius: 50vw;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0em;
+    width: 0%;  
+    transition: width 0.5s ease-in-out;
+}
+.lets-meet-wrapper .lets-meet .contact-form #contact div .submit .arrow{
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0.8em;
+}
+.lets-meet-wrapper .lets-meet .contact-form #contact div .submit  input[type=submit]:hover 
+~ .circul{
+    width: 80%;    
+}
+.lets-meet-wrapper .lets-meet .contact-form #contact div .submit input[type=submit]{
+    position: absolute;   
+    z-index: 6;
+    opacity: 0;
+    top: 0em;
+    bottom: 0em;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.budget{
+    flex: 1 0 100%;
+    font-size: 1rem;
+    color: #fff;
+    margin: 1rem;
+    font-family: 'Metropolis-Light';
+}
+.lets-meet-wrapper .lets-meet .contact-form #contact .input-wrapper-radio {
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 100vw;
+    margin: 0.2em 0.3em;
+    background-color: #c4c4c435;
+    font-size: 1rem;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact .input-wrapper-radio label{
+    color: #fff;
+    font-size: 0.7em;
+    padding: 1em 1em;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact .input-wrapper-radio .radio:not(:checked) + label:hover{
+    background: linear-gradient(29deg,#2b49f080 24% ,#DD4FE980 75% );
+}
+
+.lets-meet-wrapper .lets-meet .contact-form #contact .input-wrapper-radio .radio:checked + label{
+    background: linear-gradient(29deg,#2B47F0 24% ,#DD4FE9 75% );
+}
+
+.radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+
+.lets-meet-wrapper .lets-meet .contact-text{
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.lets-meet-wrapper .lets-meet .contact-text .padding{
+    padding: 1vh 4vw 6vh 4vw;
+}
+
+.lets-meet-wrapper .lets-meet .contact-text h3{
+    font-size: 3em;
+    font-family: 'Metropolis-Bold';
+    position: relative;
+    z-index: 2;
+}
+
+.lets-meet-wrapper ,.lets-meet .contact-text > p{
+    font-family: 'Metropolis-light';
+    position: relative;
+    z-index: 2;
+}
+
+.lets-meet-wrapper .lets-meet .contact-text  .info-wrapper > div{
+    position: relative;
+    overflow: auto;
+}
+
+
+.lets-meet-wrapper .lets-meet .contact-text .info-wrapper span{
+    color:#2B47F0 ;
+    font-family: 'Metropolis-Bold';
+    white-space: nowrap;
+    font-size: min(max(1.1rem,calc(1.1rem + 0.01vw)),1.75rem);
+    letter-spacing: 0.1vw;
+    margin-top: 1vw;
+    position: relative;
+    z-index: 2;
+    font-weight: bolder;
+    float: left;
+}
+
+.lets-meet-wrapper .lets-meet .contact-text .info-wrapper p{
+    color:#DD4FE9 ;
+    font-family: 'Metropolis-Light';
+    font-size: min(max(0.9rem,calc(0.9rem + 0.01vw)),1.75rem);
+    letter-spacing: 0.1vw;
+    margin-top: 1vw;
+    position: relative;
+    z-index: 2;
+    line-height: min(max(1rem,calc(1rem + 0.01vw)),1.75rem);;
+    width: 90%;
+    float: left;
+    margin-left: 2%;
+}
+
+
+.lets-meet-wrapper .lets-meet .contact-text  .social-media {
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+ }
+ .lets-meet-wrapper .lets-meet .contact-text  .social-media li{
+    display: inline;
+    color:#DD4FE9 ;
+    font-size: 1.5em;
+    margin-right: 1.5em;
+    cursor: pointer;
+    padding-top: 0.1em;
+    z-index: 6;
+    position: relative;
+ }
+
+ @supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+    .lets-meet-wrapper .lets-meet .contact-text  .social-media li{ 
+        background-image: linear-gradient(to right, #2B47F0, #DD4FE9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+    .lets-meet-wrapper .lets-meet .contact-text .info-wrapper p{
+        background-image: linear-gradient(to right, #2B47F0, #DD4FE9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+    }
+}
+
+/* @media screen and (max-width: 1400px) {
+    .lets-meet-wrapper .lets-meet{
+        width: 80%;
+    }
+} */
+
+@media screen and (max-width: 1100px) {
+    .lets-meet-wrapper .lets-meet{
+        width: 80%;
+    }
+}
+/* 990px and below */
+@media screen and (max-width: 990px) {
+
+    .lets-meet-wrapper .lets-meet .coffee{
+        flex: 1 0 100%;
+    }
+    .lets-meet-wrapper .lets-meet .coffee .coffee-wrapper{
+        float: initial;
+        margin: auto;
+    }
+
+    .lets-meet-wrapper .lets-meet .coffee .info-wrapper {
+        max-width: initial;
+    }
+
+}
+
+
+@media screen and (max-width: 672px) {
+
+    .lets-meet-wrapper .lets-meet .contact-form .image-wrapper .title{
+        left: 50%;
+        transform: translate(-50%,0);     }
+
+    .lets-meet-wrapper .lets-meet .contact-form .image-wrapper .title h3{
+        text-align: center;
+         
+        display: inline-block;  
+        font-size: 2.5rem;
+    }
+
+    .lets-meet-wrapper .lets-meet .contact-form .image-wrapper  p{
+        text-align: center;
+    }
+
+    .lets-meet-wrapper .lets-meet .contact-form .image-wrapper > div:nth-child(2){
+        display: none;
+    }
+
+    .lets-meet-wrapper .lets-meet .contact-form #contact .input-wrapper {
+        flex: 1 0 70%;
+    }
+
+    .lets-meet-wrapper .lets-meet .contact-form #contact textarea {
+        padding: 1rem 1rem;
+    }
+
+    .lets-meet-wrapper .lets-meet .contact-form #contact div input[type=submit] {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+    .lets-meet-wrapper .lets-meet .contact-form {
+        flex: 1 0 45%;
+        min-width: 35vh;
+    }
+
+}

@@ -1,0 +1,749 @@
+@font-face {
+    font-family: "Metropolis-Bold";
+    src: url(../fonts/metropolis/Metropolis-Bold.otf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Metropolis-Light";
+    src: url(../fonts/metropolis/Metropolis-Light.otf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Metropolis-black";
+    src: url(../fonts/metropolis/Metropolis-Black.otf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Metropolis-Medium";
+    src: url(../fonts/metropolis/Metropolis-Medium.otf);
+    font-display: swap;
+}
+
+html {
+    font-size: 16px;
+    /* scroll-behavior: smooth */
+}
+body {
+    margin: 0px;
+    background-color: black;
+}
+
+section{
+    /* overflow: overlay; */
+}
+
+
+.paints {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.scroll-mask {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.viewport-one{
+    height: 100vh;
+}
+
+.sub-viewport{
+    height: 85px !important;
+    background-color: white;
+}
+.sub-viewport .navigation-section .nav .lang a {
+    color: black !important;
+}
+.navbar{
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 50%;
+    padding-top: 5px;
+    font-size: 0.9em;
+}
+.navbar a{
+    color:#000;
+    font-family: 'Metropolis-Bold';
+    text-decoration: none;
+}
+.contact-btn{
+    font-family: 'Metropolis-Bold';
+    margin-right: 0.5rem;
+}
+.contact-btn a{
+    text-decoration: none;
+    color: black;
+}
+/* navigation menu */
+.viewport-one .navigation-section.fixed{
+    width: 100%;
+    height: 5rem;
+    background-color: #fff;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+}
+
+.viewport-one .wraper{
+    position: absolute;
+    display: inline-block;
+    z-index: 5;
+    top: 50vh;
+    left: 46%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.viewport-one .wraper.fixed{
+    opacity: 0;
+    filter: blur(5rem);
+    transform: translate(-50%,150%);
+    transition: all 1s;
+}
+
+@keyframes logo-animaiton {
+    0%{
+        opacity: 0;
+        filter: blur(5rem);
+        transform: translate(-50%,150%) scale(4,0.2);
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(-50%,-50%);
+    }
+}
+
+.viewport-one .navigation-section .nav .header-wraper{
+    opacity: 0;
+    filter: blur(5rem);
+    position: absolute;
+    display: inline-block;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 12em;
+    transform: translate(0%,-0.5em);
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.viewport-one .navigation-section .nav .header-wraper.fixed{
+    opacity: 1;
+    filter: blur(0rem);
+    transform: translate(0%,-0.5em)  scale(1,1);
+    transition: all 1s;
+}
+
+@keyframes relative-position {
+    0%{
+        opacity: 1;
+        position: fixed;
+        top: 1.8vh;
+        left: 3em;
+        width: 10em;
+        transform: translate(0,0);
+    }
+    100%{
+        opacity: 1;
+        position: fixed;
+        top: 50%;
+        left: 49%;
+        width: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+
+/* header content */
+.viewport-one .header-section {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.viewport-one .header-section img {
+    display: block;
+    max-width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* .viewport-one .header-section span{
+    background: -webkit-linear-gradient(70deg, #2B47F0 3%, #DD4FE9 30%, #DD4FE9 66%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1.5px transparent;
+    color: black;
+} */
+
+.viewport-one .header-section p {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    font-family: 'Metropolis-Light';
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-top: 2vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.viewport-one .header-section h1 {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    font-family: 'Metropolis-Light';
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-top: 2vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.viewport-one .header-section svg {
+    width: 50vw;
+}
+
+.viewport-one .header-section .qoute{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 2vh;
+    display: inline-block;
+}
+
+.viewport-one .header-section .qoute a{
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 50vw;
+    color: white;
+    font-family: 'Metropolis-Light';
+    font-size: 1.1rem;
+    padding: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.viewport-one .navigation-section .nav{
+    display: flex;
+    align-items: center;
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+    position: fixed;
+    z-index: 4;
+    font-family: 'Metropolis-Light';
+    letter-spacing: 0.05em;
+}
+
+.viewport-one .navigation-section .nav .get-quote{
+    font-size: 1rem;
+    background: linear-gradient(29deg,#2B47F0 24% ,#DD4FE9 75% );
+    border-radius: 1.6em;
+    margin-left: auto;
+    /* margin-right:1em; */
+    cursor: pointer;
+}
+
+.viewport-one .navigation-section .nav .get-quote > div{
+    position: relative;
+    padding: 0.9em 0.9em 0.9em 0em;}
+
+.viewport-one .navigation-section .nav .get-quote .head{
+    left: 0.8rem;
+    position: absolute;
+    height: 2em;
+    width: auto;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.viewport-one .navigation-section .nav .get-quote > div > a{
+    text-decoration: none;
+}
+
+.viewport-one .navigation-section .nav .get-quote > div > a > span{
+    color: white;
+    margin-left: 3em;
+}
+
+.viewport-one .navigation-section .nav .lang{
+    color: white;
+    width: 3em;
+    line-height: 1.7em;
+    text-align: center;
+    /* margin-right:1em; */
+    cursor: pointer;
+}
+
+.viewport-one .navigation-section .nav .lang a{
+    text-decoration: none;
+    color: white;
+}
+
+.viewport-one .navigation-section .nav .bar {
+    position: relative;
+    z-index: 6;
+    margin: 0.3em auto;
+    padding: 0.1em 0.5em;
+    border-top: 0.1em solid #DD4FE9;
+    border-bottom: 0.1em solid #DD4FE9;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.viewport-one .navigation-section .nav .con {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border: 0.1em solid #555;
+    border-radius: 50em;
+    padding: 0.5em;
+    transition: border 0.5s ease;
+}
+
+.viewport-one .navigation-section .nav .con:hover {
+    border: 0.05em solid #fff;
+}
+
+
+/* social media icon */
+@media screen and (hover: hover) {
+    .viewport-one .social-media-icon{
+        display: none;
+    }
+}
+.viewport-one .social-media-icon{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 50%;
+    height: 50%;
+}
+
+/* .viewport-one .social-media-icon a{
+    text-decoration: none;
+}
+.viewport-one .social-media-icon span{
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    transform: translate(0,-1em);
+    color: #fff;
+    font-family: 'Metropolis-Light';
+} */
+
+
+#modal-container {
+    position: fixed;
+    display: table;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 15;
+}
+#modal-container.open {
+    transform:scaleY(.01) scaleX(01);
+    animation:unfoldIn 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+#modal-container.open .modal-background .modal {
+    transform:scale(1);
+}
+
+#modal-container.open.close {
+    transform:scale(1);
+    animation:unfoldOut 0.5s .2s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+#modal-container .modal-background {
+    background: rgb(255 255 255);
+    text-align: center;
+    vertical-align: middle;
+    height: 100vh;
+    font-size: calc(1rem - calc(0.6vmin));
+    padding: 0vh 6vw;
+}
+
+#modal-container .modal-background .modal {
+    position: relative;
+    z-index: 8;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1em;
+}
+
+#modal-container .modal-background .modal h2 {
+    font-size:25px;
+    line-height:25px;
+    margin-bottom:15px;
+}
+#modal-container .modal-background .modal p {
+    font-size:18px;
+    line-height:22px;
+}
+
+#modal-container .modal-background  .red-shadow{
+    position: absolute;
+    z-index: 7;
+    bottom: -5%;
+    right: -11%;
+    padding: 10% 22%;
+    background: linear-gradient(29deg,#2B47F0 24% ,#DD4FE9 75% );
+    filter: blur(12em);
+}
+
+#modal-container .modal-background .modal .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 8;
+    padding-top: 2rem;
+}
+#modal-container .modal-background .modal .close-button{
+    position: relative;
+    cursor: pointer;
+    height: 3em;
+    width: 3em;
+}
+
+#modal-container .modal-background .modal .close-button span{
+    background-color: #000;
+    position: absolute;
+    height: 80%;
+    width: 5%;
+    transform: rotateZ(45deg);
+}
+
+#modal-container .modal-background .modal .close-button span:nth-child(2){
+    transform: rotateZ(135deg);
+}
+
+#modal-container .modal-background .modal > div > img{
+    width: 100%;
+    height: auto;
+}
+
+#modal-container .modal-background .modal .menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    z-index: 8;
+}
+
+#modal-container .modal-background .modal .menu-list ul{
+    list-style: none;
+    font-family: 'Metropolis-Bold';
+    font-size: 4em;
+    letter-spacing: 0.15em;
+    padding: 0;
+    line-height: 0.7em;
+}
+#modal-container .modal-background .modal .menu-list ul li{
+    margin-bottom: 00.5em;
+}
+
+#modal-container .modal-background .modal .menu-list ul li div{
+   display: inline-block;
+}
+#modal-container .modal-background .modal .menu-list ul li span{
+    cursor: pointer;
+}
+
+#modal-container .modal-background .modal .menu-list ul li span a{
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap
+}
+
+/* #modal-container .modal-background .modal .menu-list ul li span:hover{
+    border-bottom: 0.03em solid #000;
+} */
+
+#modal-container .modal-background .modal .menu-list ul li span:after {
+    content: '';
+    position: relative;
+    left: 0;
+    display: block;
+    height: 0.1em;
+    width: 0px;
+    background: transparent;
+    border-radius: 50em;
+    transition: width .5s ease, background-color .5s ease;
+  }
+  #modal-container .modal-background .modal .menu-list ul li span:hover:after {
+    width: 100%;
+    background: rgb(0, 0, 0);
+  }
+
+#modal-container .modal-background .modal .menu-list .contact-info{
+    font-family: 'Metropolis-light';
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+#modal-container .modal-background .modal .menu-list .contact-info a{
+    text-decoration: none;
+    display: block;
+    color: #000;
+    margin-bottom: 0.7em;
+}
+#modal-container .modal-background .modal .menu-list .contact-info .social-media {
+   padding: 0;
+   margin: 0;
+}
+#modal-container .modal-background .modal .menu-list .contact-info .social-media li{
+    display: inline;
+    color: #000;
+    font-size: 0.3em;
+    cursor: pointer;
+}
+
+#modal-container .modal-background .modal .menu-list .contact-info .social-media li a{
+    display: inline;
+}
+
+#modal-container .modal-background .modal .menu-list .contact-info .get-quote{
+    background: linear-gradient(29deg,#2B47F0 24% ,#DD4FE9 75% );
+    border-radius: 1.6em;
+    margin: 4em 4em 0 0;
+    cursor: pointer;
+}
+
+#modal-container .modal-background .modal .menu-list .contact-info .get-quote > div{
+    position: relative;
+    padding: 0.9em 0.9em 0.9em 0em;}
+
+#modal-container .modal-background .modal .menu-list .contact-info .get-quote .head{
+    left: 1.5rem;
+    position: absolute;
+    height: 1.8em;
+    width: auto;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+#modal-container .modal-background .modal .menu-list .contact-info .get-quote > div > a{
+    margin: 0;
+}
+
+#modal-container .modal-background .modal .menu-list .contact-info .get-quote > div > a > span{
+    color: white;
+    margin-left: 3em;
+}
+#modal-container .modal-background .modal .menu-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 8;
+    padding: 2rem 0;
+}
+#modal-container .modal-background .modal .menu-footer #text{
+    display: inline;
+    font-size: 2.5em;
+    font-family: 'Metropolis-Bold';
+    margin: 0;
+    line-height: 1em;
+    text-align: left;
+}
+#modal-container .modal-background .modal .menu-footer span{
+    font-family: 'Metropolis-light';
+    margin-top: 1em;
+}
+
+.content {
+min-height:100%;
+height:100%;
+background:white;
+position:relative;
+z-index:5;
+}
+
+.content h1 {
+    padding:75px 0 30px 0;
+    text-align:center;
+    font-size:30px;
+    line-height:30px;
+  }
+.content .buttons {
+    max-width:800px;
+    margin:0 auto;
+    padding:0;
+    text-align:center;
+}
+
+.content .buttons .button {
+    display:inline-block;
+    text-align:center;
+    padding:10px 15px;
+    margin:10px;
+    background:red;
+    font-size:18px;
+    background-color:#efefef;
+    border-radius:3px;
+    box-shadow:0 1px 2px rgba(0,0,0,.3);
+    cursor:pointer;
+  }
+
+.content .buttons .button:hover {
+    color:white;
+    background:#009bd5;
+}
+
+@keyframes unfoldIn {
+    0% {
+        transform:scaleY(.005) scaleX(0);
+    }
+    50% {
+        transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+        transform:scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes unfoldOut {
+    0% {
+        transform:scaleY(1) scaleX(1);
+    }
+    50% {
+        transform:scaleY(.005) scaleX(1);
+    }
+    100% {
+        transform:scaleY(.005) scaleX(0);
+    }
+}
+
+/* Normalize/Reset only elements used */
+/* .viewport-one .social-media-icon ul{
+    list-style: none;
+    padding: 0;
+}
+.viewport-one .social-media-icon  svg {
+    fill: #fff;
+  }
+
+.viewport-one .social-media-icon  circle {
+    animation: scroll 1.5s ease infinite;
+} */
+
+@keyframes scroll {
+0% {
+    opacity: 0;
+    cy: 481;
+}
+33% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+    cy: 231;
+}
+}
+
+
+@media screen and (max-width: 1375px){
+    #modal-container .modal-background .modal .menu-list ul{
+        font-size: 2.5em;
+    }
+    .navbar{
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+/* 990px and below */
+@media screen and (max-width: 990px) {
+    #modal-container .modal-background{
+        padding: 0vh 6vw;
+    }
+    #modal-container .modal-background .modal .menu-list .contact-info .get-quote{
+        margin: 4em 2em 0 0em;
+    }
+
+    #modal-container .modal-background .modal .menu-list ul{
+        font-size: 2.5em;
+        margin: 0;
+    }
+    #modal-container .modal-background .modal .menu-list,
+    #modal-container .modal-background .modal .menu-footer{
+        flex-wrap: wrap;
+    }
+    #modal-container .modal-background .modal .menu-list .contact-info .get-quote{
+        margin: 2em 4em 0 0em;
+    }
+}
+
+
+@media screen and (max-width: 672px) {
+    .sub-viewport{
+        height: 68px !important;
+    }
+    html {
+        font-size: 12px;
+    }
+    .viewport-one .navigation-section .nav .lang{
+        /* display: none; */
+    }
+    .viewport-one .header-section svg {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .viewport-one .navigation-section .nav .con{
+        /* position: fixed;
+        right: 1em; */
+    }
+    .viewport-one .navigation-section .nav .get-quote{
+        /* margin-right: auto; */
+    }
+    .viewport-one .navigation-section .nav .header-wraper.fixed .da-noblink,
+    .viewport-one .navigation-section .nav .header-wraper.fixed .studio-noblink{
+       opacity: 0;
+       transition: opacity 1s;
+    }
+    #modal-container .modal-background .modal .menu-footer span{
+        margin-bottom: 0.2em;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 10px;
+    }
+    .sub-viewport{
+        height: 50px !important;
+    }
+}

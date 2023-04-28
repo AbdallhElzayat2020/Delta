@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Metropolis-Bold";
+    src: url(../fonts/metropolis/Metropolis-Bold.otf);
+    font-display: swap;
+}
+@font-face {
+    font-family: "Metropolis-Light";
+    src: url(../fonts/metropolis/Metropolis-Light.otf);
+    font-display: swap;
+}
+
+@keyframes logo {
+    20%,         24%, 27%,         31%, 55%,       59%{
+        opacity: 1;
+    }
+       21%, 23%,           28%,23%,            57% {
+        opacity: 0;
+    }
+}
+
+@keyframes logo-shadow {
+    19%,          25%, 26%,        31%, 54%,             60%{
+        opacity: 1;
+    }
+        21%, 24%,           27%,24% ,            56%, 58%{
+        opacity: 0;
+    }
+    80%,       82%, 90%,      92%,          95%{
+        opacity: 1;
+    }
+         81%,            91%,       94%{
+        opacity: 0.5;
+    }
+}
+
+@keyframes da {
+    21%,           25%,       27%, 30%,          38%{
+        opacity: 1;
+    }
+         22%, 24%,       26%,           32%, 36%{
+        opacity: 0;
+    }
+}
+
+@keyframes da-shadow {
+    20%,          26%,      28%, 29%,            39%{
+        opacity: 1;
+    }
+        21%, 25%,      27%,            32%, 37%{
+        opacity: 0;
+    }
+}
+
+@keyframes studio {
+    50%,          63%{
+        opacity: 1;
+    }
+        51%, 62%{
+        opacity: 0;
+    }
+    80%,       82%, 90%,      92%,          95%{
+        opacity: 1;
+    }
+         81%,            91%,       94%{
+        opacity: 0;
+    }
+}
+
+@keyframes studio-shadow {
+    49%,          64%{
+        opacity: 1;
+    }
+         50%, 63%{
+        opacity: 0;
+    } 
+    80%,       82%, 90%,      92%,          95%{
+        opacity: 1;
+    }
+         81%,            91%,       94%{
+        opacity: 0;
+    }
+}
+
+
+body { background-color: #161617; }
+
+
+
+.header-wraper.fixed a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+.container {
+    display: flex;
+    font-size: 1rem;
+    position: relative;
+}
+
+.container.shadow {
+    transform: perspective(12em) rotateX(193deg) translatey(-12px) translateZ(30px);
+    position: relative;
+    top: -5em;
+    filter: blur(20px);
+    opacity: 0.2;
+    width: 100%;
+    left: 0;
+    filter: blur(2vw);
+}
+
+.layer{  
+    position: relative;
+    transition: opacity 1s;
+    margin: auto;
+}
+
+.layer img{  
+    width: 100%;
+    height: auto;
+    opacity: 1;
+}
+
+.layer .layer-1{  
+    position: relative;
+    z-index: 4;
+}
+
+.layer .layer-2{  
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: 3;
+}
+
+.layer .layer-3{  
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: 2;
+    opacity: 1;
+}
+
+.layer.studio{
+    /* margin-left: -2%; */
+}
+
+.logo .layer-1{   
+    animation: logo  3s infinite ;
+   
+}
+.logo .layer-2{
+    animation: logo-shadow 3s infinite ;
+}
+
+.da .layer-1{   
+    animation: da  5s infinite ;
+   
+}
+.da .layer-2{
+    animation: da-shadow 5s infinite ;
+}
+
+.studio .layer-1{   
+    animation: studio  6s infinite ;
+   
+}
+.studio .layer-2{
+    animation: studio-shadow 6s infinite ;
+}
+
+.wraper.fixed .logo .layer-1,
+.wraper.fixed .logo .layer-2,
+.wraper.fixed .da .layer-1,
+.wraper.fixed .da .layer-2,
+.wraper.fixed .studio .layer-1,
+.wraper.fixed .studio .layer-2 {
+    animation:none;
+}
+
+.wraper.hidden {
+    z-index: -1 !important;
+}
